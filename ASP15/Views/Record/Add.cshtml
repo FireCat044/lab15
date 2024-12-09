@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "Додати запис";
+}
+
+<h1>Додати новий запис</h1>
+
+@if (ViewBag.SuccessMessage != null)
+{
+    <div style="color: green;">
+        @ViewBag.SuccessMessage
+    </div>
+}
+
+@if (ViewBag.ErrorMessage != null)
+{
+    <div style="color: red;">
+        @ViewBag.ErrorMessage
+    </div>
+}
+
+<form method="post">
+    <div>
+        <label for="name">Назва:</label>
+        <input type="text" id="name" name="name" required />
+    </div>
+    <button type="submit">Додати</button>
+</form>
